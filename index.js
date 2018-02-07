@@ -17,7 +17,7 @@ const addon = require('bindings')('naprom');
 
 var otherStuff = setInterval(() => { console.log('Doing other stuff.'); }, 500);
 
-var p = addon.naprom(3000, "native promise completed");
+var p = addon.naprom(3000, "native promise pass-thru");
 console.log(p);
 p.then(v => {
   console.log(`Promise completed with '${v}'.`);
